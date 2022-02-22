@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @tasks = Task.where({ user_id: @current_user.id }) #only tasks that the user created / Need to associate a task witha user in the controller
     @task = Task.new
   end
 

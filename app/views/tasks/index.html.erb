@@ -6,7 +6,7 @@
   <% end %>
 
   <table>
-    <% for task in @tasks.where({ user_id: @current_user.id }) %> <!-- only tasks that the user created / Need to associate a task witha user in the controller-->
+    <% for task in @tasks %>
       <tr>
         <td>
           <%= task.description %>
